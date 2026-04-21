@@ -439,6 +439,50 @@ ALTER TABLE `stocker`
   ADD CONSTRAINT `stocker_ibfk_2` FOREIGN KEY (`id_historique`) REFERENCES `historique` (`id_historique`);
 COMMIT;
 
+-- seeds for parking
+-- LEVEL A
+INSERT INTO place_parking (statut, niveau, zone) VALUES
+('libre', 'A', 'A1'),
+('libre', 'A', 'A2'),
+('libre', 'A', 'A3'),
+('libre', 'A', 'A4'),
+('libre', 'A', 'A5'),
+
+('libre', 'A', 'A1'),
+('libre', 'A', 'A2'),
+('libre', 'A', 'A3'),
+('libre', 'A', 'A4'),
+('libre', 'A', 'A5');
+
+-- LEVEL B
+INSERT INTO place_parking (statut, niveau, zone) VALUES
+('libre', 'B', 'B1'),
+('libre', 'B', 'B2'),
+('libre', 'B', 'B3'),
+('libre', 'B', 'B4'),
+('libre', 'B', 'B5'),
+
+('libre', 'B', 'B1'),
+('libre', 'B', 'B2'),
+('libre', 'B', 'B3'),
+('libre', 'B', 'B4'),
+('libre', 'B', 'B5');
+
+-- LEVEL C
+INSERT INTO place_parking (statut, niveau, zone) VALUES
+('libre', 'C', 'C1'),
+('libre', 'C', 'C2'),
+('libre', 'C', 'C3'),
+('libre', 'C', 'C4'),
+('libre', 'C', 'C5'),
+
+('libre', 'C', 'C1'),
+('libre', 'C', 'C2'),
+('libre', 'C', 'C3'),
+('libre', 'C', 'C4'),
+('libre', 'C', 'C5');
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+

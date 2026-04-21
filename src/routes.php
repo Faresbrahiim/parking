@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/controllers/AuthController.php';
-
+require_once 'controllers/PlaceController.php';
 function route($method, $uri) {
 
     $uri = rtrim($uri, '/');
@@ -20,7 +20,14 @@ function route($method, $uri) {
     $controller = new AuthController();
     $controller->login();
     return;
-}
+    }
+
+    if ($method === 'GET' && $uri === '/places') {
+    $controller = new PlaceController();
+    $controller->index();
+    return;
+    }
+
     http_response_code(404);
     echo json_encode([
         "error" => "Route not found",
