@@ -87,7 +87,10 @@ class AuthController {
         echo json_encode(["error" => "Invalid credentials"]);
         return;
     }
+   session_regenerate_id(true);
 
+    $_SESSION['user_id'] = $user['id_utilisateur'];
+    $_SESSION['email'] = $user['email'];
     http_response_code(200);
 
     echo json_encode([

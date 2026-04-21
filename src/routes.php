@@ -2,12 +2,14 @@
 
 require_once __DIR__ . '/controllers/AuthController.php';
 require_once 'controllers/PlaceController.php';
+require_once 'middlewares/AuthMiddleware.php';
+
 function route($method, $uri) {
 
     $uri = rtrim($uri, '/');
 
     if ($method === 'GET' && $uri === '') {
-        echo json_encode(["message" => "API is working 🚀"]);
+        echo json_encode(["message" => "API is working "]);
         return;
     }
 
@@ -29,6 +31,7 @@ function route($method, $uri) {
     }
 
     if ($method === 'POST' && $uri === '/pay') {
+    AuthMiddleware::check();
     $controller = new PlaceController();
     $controller->payAndOccupy();
     return;

@@ -1,4 +1,6 @@
 <?php
+session_start(); // MUST be first
+
 
 header("Content-Type: application/json");
 
