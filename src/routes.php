@@ -28,6 +28,11 @@ function route($method, $uri) {
     return;
     }
 
+    if ($method === 'POST' && $uri === '/pay') {
+    $controller = new PlaceController();
+    $controller->payAndOccupy();
+    return;
+}
     http_response_code(404);
     echo json_encode([
         "error" => "Route not found",
