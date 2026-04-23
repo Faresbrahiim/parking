@@ -476,11 +476,11 @@ INSERT INTO place_parking (statut, niveau, zone) VALUES
 ('libre', 'C', 'C4'),
 ('libre', 'C', 'C5'),
 
-('libre', 'C', 'C1'),
-('libre', 'C', 'C2'),
-('libre', 'C', 'C3'),
-('libre', 'C', 'C4'),
-('libre', 'C', 'C5');
+('handicapLibre', 'C', 'C1'),
+('handicapLibre', 'C', 'C2'),
+('handicapLibre', 'C', 'C3'),
+('handicapLibre', 'C', 'C4'),
+('handicapLibre', 'C', 'C5');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
