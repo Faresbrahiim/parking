@@ -1,33 +1,40 @@
 /**
  * ParkIQ — Smart Parking  |  app.js
+ * Backend: PHP session-based auth (no JWT)
+ * Fields: id_place, statut ('libre'/'occupe'), nom, prenom, id_utilisateur
  */
 
 const BASE_URL = 'http://localhost:8000';
+
 /* ══════════════════════════════════════════════
-   STATE
+   STATE — persisted in localStorage
 ══════════════════════════════════════════════ */
 const state = {
-  token: localStorage.getItem('parkiq_token') || null,
-  user:  JSON.parse(localStorage.getItem('parkiq_user') || 'null'),
-  places: [],
-  filter: 'all',
+  user:         JSON.parse(localStorage.getItem('parkiq_user') || 'null'),
+  places:       [],
+  filter:       'all',
   currentPlace: null,
-  duration: 1,
+  duration:     1,
 };
 
 /* ══════════════════════════════════════════════
-   API HELPERS
+   API HELPER
+   credentials:'include' sends PHP session cookie
 ══════════════════════════════════════════════ */
 async function api(path, method = 'GET', body = null) {
   const opts = {
     method,
+    credentials: 'include',                      // sends session cookie
     headers: { 'Content-Type': 'application/json' },
   };
-  if (state.token) opts.headers['Authorization'] = `Bearer ${state.token}`;
   if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(BASE_URL + path, opts);
-  const data = await res.json().catch(() => ({}));
-  return { ok: res.ok, status: res.status, data };
+  try {
+    const res  = await fetch(BASE_URL + path, opts);
+    const data = await res.json().catch(() => ({}));
+    return { ok: res.ok, status: res.status, data };
+  } catch (e) {
+    return { ok: false, status: 0, data: { error: 'Network error — is the server running?' } };
+  }
 }
 
 /* ══════════════════════════════════════════════
@@ -37,12 +44,10 @@ function showView(id) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('view-' + id)?.classList.add('active');
-  document.querySelector(`[data-view="${id}"]`)?.classList.add('active');
-
+  document.querySelector(`.nav-btn[data-view="${id}"]`)?.classList.add('active');
   if (id === 'places') loadPlaces();
 }
 
-// Nav buttons
 document.querySelectorAll('[data-view]').forEach(btn => {
   btn.addEventListener('click', () => showView(btn.dataset.view));
 });
@@ -50,9 +55,8 @@ document.querySelectorAll('[data-view]').forEach(btn => {
 /* ══════════════════════════════════════════════
    AUTH UI
 ══════════════════════════════════════════════ */
-const authModal    = document.getElementById('authModal');
-const authToggle   = document.getElementById('authToggle');
-const closeModal   = document.getElementById('closeModal');
+const authModal  = document.getElementById('authModal');
+const closeModal = document.getElementById('closeModal');
 
 function openAuthModal(tab = 'login') {
   authModal.classList.add('open');
@@ -60,14 +64,13 @@ function openAuthModal(tab = 'login') {
 }
 function closeAuthModal() { authModal.classList.remove('open'); }
 
-authToggle.addEventListener('click', () => {
-  if (state.token) logout();
+document.getElementById('authToggle').addEventListener('click', () => {
+  if (state.user) logout();
   else openAuthModal('login');
 });
 closeModal.addEventListener('click', closeAuthModal);
 authModal.addEventListener('click', e => { if (e.target === authModal) closeAuthModal(); });
 
-// Tabs
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => switchTab(tab.dataset.tab));
 });
@@ -89,19 +92,19 @@ document.getElementById('loginBtn').addEventListener('click', async () => {
   btn.textContent = 'Signing in…'; btn.disabled = true;
 
   const { ok, data } = await api('/login', 'POST', { email, password });
-
   btn.textContent = 'Sign In'; btn.disabled = false;
 
-  if (ok && data.token) {
-    state.token = data.token;
-    state.user  = data.user || { name: email.split('@')[0] };
-    localStorage.setItem('parkiq_token', state.token);
-    localStorage.setItem('parkiq_user', JSON.stringify(state.user));
+  if (ok && data.status === 'success') {
+    // API returns: { user: { id, nom, prenom, email } }
+    state.user = data.user;
+    localStorage.setItem('parkiq_user', JSON.stringify(data.user));
     updateAuthUI();
     closeAuthModal();
-    showToast('Welcome back! 👋', 'success');
+    showToast(`Welcome back, ${data.user.prenom || data.user.nom}! 👋`, 'success');
+    // ── Redirect to parking lots after login ──
+    showView('places');
   } else {
-    errEl.textContent = data.message || data.error || 'Login failed. Check your credentials.';
+    errEl.textContent = data.error || data.message || 'Invalid credentials.';
   }
 });
 
@@ -123,9 +126,9 @@ document.getElementById('registerBtn').addEventListener('click', async () => {
   const { ok, data } = await api('/register', 'POST', { name, email, password });
   btn.textContent = 'Create Account'; btn.disabled = false;
 
-  if (ok) {
-    sucEl.textContent = 'Account created! Please sign in.';
-    setTimeout(() => switchTab('login'), 1500);
+  if (ok && data.status === 'success') {
+    sucEl.textContent = '✅ Account created! Please sign in.';
+    setTimeout(() => switchTab('login'), 1600);
   } else {
     errEl.textContent = data.message || data.error || 'Registration failed. Try again.';
   }
@@ -133,28 +136,37 @@ document.getElementById('registerBtn').addEventListener('click', async () => {
 
 /* ─── LOGOUT ─────────────────────────────────── */
 function logout() {
-  state.token = null; state.user = null;
-  localStorage.removeItem('parkiq_token');
+  state.user = null;
   localStorage.removeItem('parkiq_user');
   updateAuthUI();
-  showToast('Signed out.', 'success');
+  showView('home');
+  showToast('Signed out successfully.', 'success');
 }
 
+/* ─── UPDATE NAV ─────────────────────────────── */
 function updateAuthUI() {
-  const navUser   = document.getElementById('navUser');
+  const navUser    = document.getElementById('navUser');
   const authToggle = document.getElementById('authToggle');
+  const logoutBtn  = document.getElementById('logoutBtn');
+
   if (state.user) {
-    navUser.textContent = state.user.name || 'User';
-    authToggle.textContent = 'Sign Out';
+    const fullName = `${state.user.prenom || ''} ${state.user.nom || ''}`.trim() || state.user.email;
+    navUser.textContent      = fullName;
+    authToggle.style.display = 'none';        // hide Sign In
+    logoutBtn.style.display  = 'flex';        // show Logout
   } else {
-    navUser.textContent = 'Guest';
-    authToggle.textContent = 'Sign In';
+    navUser.textContent      = '';
+    authToggle.style.display = 'flex';
+    logoutBtn.style.display  = 'none';
   }
 }
+
+document.getElementById('logoutBtn').addEventListener('click', logout);
 updateAuthUI();
 
 /* ══════════════════════════════════════════════
    PLACES
+   API: GET /places → { status, data: [ {id_place, statut, ...} ] }
 ══════════════════════════════════════════════ */
 async function loadPlaces() {
   const grid = document.getElementById('placesGrid');
@@ -162,35 +174,39 @@ async function loadPlaces() {
 
   const { ok, data } = await api('/places');
 
-  if (!ok || !Array.isArray(data)) {
+  // API wraps array in data.data
+  const places = Array.isArray(data?.data) ? data.data
+               : Array.isArray(data)        ? data
+               : null;
+
+  if (!ok || !places) {
     grid.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon">⚠️</div>
         <h3>Could not load parking lots</h3>
-        <p>Check your API connection and try again.</p>
+        <p>${data?.error || 'Check your API connection and try again.'}</p>
       </div>`;
     updateStats([]);
     return;
   }
 
-  state.places = data;
-  updateStats(data);
+  state.places = places;
+  updateStats(places);
   renderPlaces();
 }
 
 function renderPlaces() {
-  const grid   = document.getElementById('placesGrid');
-  const filter = state.filter;
+  const grid = document.getElementById('placesGrid');
+  let places  = state.places;
 
-  let places = state.places;
-  if (filter === 'available') places = places.filter(p => availableSlots(p) > 0);
-  if (filter === 'full')      places = places.filter(p => availableSlots(p) === 0);
+  if (state.filter === 'available') places = places.filter(p => isLibre(p));
+  if (state.filter === 'full')      places = places.filter(p => !isLibre(p));
 
   if (!places.length) {
     grid.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon">🅿️</div>
-        <h3>No parking lots found</h3>
+        <h3>No parking slots found</h3>
         <p>Try a different filter.</p>
       </div>`;
     return;
@@ -198,88 +214,79 @@ function renderPlaces() {
 
   grid.innerHTML = places.map((p, i) => placeCardHTML(p, i)).join('');
 
-  // Bind reserve buttons
   grid.querySelectorAll('.btn-reserve').forEach(btn => {
     btn.addEventListener('click', () => {
-      const place = state.places.find(p => String(p.id) === btn.dataset.id);
+      const place = state.places.find(p => String(p.id_place) === btn.dataset.id);
       if (place) openPayModal(place);
     });
   });
 }
 
-function availableSlots(place) {
-  if (place.available_slots !== undefined) return Number(place.available_slots);
-  if (place.total_slots !== undefined && place.occupied_slots !== undefined)
-    return Number(place.total_slots) - Number(place.occupied_slots);
-  return 0;
+/* ── Field helpers matching your DB schema ── */
+function isLibre(place) { return place.statut === 'libre'; }
+
+function placeLabel(place) {
+  return place.nom || place.name || place.location || `Slot #${place.id_place}`;
 }
-function totalSlots(place) {
-  return Number(place.total_slots || place.capacity || 0);
-}
+
 function pricePerHour(place) {
-  return Number(place.price_per_hour || place.price || place.hourly_rate || 0);
-}
-
-function placeCardHTML(place, idx) {
-  const avail  = availableSlots(place);
-  const total  = totalSlots(place);
-  const isFull = avail === 0;
-  const pct    = total ? ((total - avail) / total * 100) : 0;
-  const price  = pricePerHour(place);
-  const name   = place.name || place.location || `Lot #${place.id}`;
-
-  // Build mini slot map (max 30 dots shown)
-  const dotsMax  = Math.min(total, 30);
-  const occDots  = total ? Math.round((total - avail) / total * dotsMax) : dotsMax;
-  const slotDots = Array.from({ length: dotsMax }, (_, i) =>
-    `<div class="slot-dot ${i < occDots ? 'occupied' : ''}"></div>`
-  ).join('');
-
-  return `
-    <div class="place-card ${isFull ? 'is-full' : ''}" style="animation-delay:${idx * 60}ms">
-      <div class="card-top">
-        <div>
-          <div class="card-name">${escHtml(name)}</div>
-          <div class="card-id">ID: ${place.id}${place.address ? ' · ' + escHtml(place.address) : ''}</div>
-        </div>
-        <span class="card-badge ${isFull ? 'badge-full' : 'badge-available'}">
-          ${isFull ? 'Full' : 'Open'}
-        </span>
-      </div>
-      <div class="card-body">
-        ${total > 0 ? `<div class="slot-map">${slotDots}</div>` : ''}
-        <div class="card-meta">
-          <div class="card-avail ${isFull ? 'is-full' : ''}">
-            <span class="avail-num">${avail}</span> / ${total} slots free
-          </div>
-          ${price ? `<div>${formatPrice(price)}/hr</div>` : ''}
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill ${pct > 80 ? 'is-high' : ''}" style="width:${pct}%"></div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <button class="btn-reserve" data-id="${place.id}" ${isFull ? 'disabled' : ''}>
-          ${isFull ? '🚫 No slots available' : '⚡ Reserve a Slot'}
-        </button>
-      </div>
-    </div>`;
+  return Number(place.price_per_hour || place.price || place.tarif || 5); // default 5 MAD
 }
 
 function updateStats(places) {
-  const total    = places.reduce((s, p) => s + totalSlots(p), 0);
-  const occupied = places.reduce((s, p) => s + (totalSlots(p) - availableSlots(p)), 0);
+  const total    = places.length;
+  const free     = places.filter(isLibre).length;
   animateNum('statTotal',    total);
-  animateNum('statFree',     total - occupied);
-  animateNum('statOccupied', occupied);
-  animateNum('statLots',     places.length);
+  animateNum('statFree',     free);
+  animateNum('statOccupied', total - free);
+  animateNum('statLots',     total);  // each row = one slot in your schema
+}
+
+function placeCardHTML(place, idx) {
+  const libre  = isLibre(place);
+  const price  = pricePerHour(place);
+  const name   = placeLabel(place);
+  const pct    = libre ? 0 : 100;
+
+  return `
+    <div class="place-card ${!libre ? 'is-full' : ''}" style="animation-delay:${idx * 50}ms">
+      <div class="card-top">
+        <div>
+          <div class="card-name">${escHtml(name)}</div>
+          <div class="card-id">Slot ID: ${place.id_place}${place.localisation ? ' · ' + escHtml(place.localisation) : ''}</div>
+        </div>
+        <span class="card-badge ${libre ? 'badge-available' : 'badge-full'}">
+          ${libre ? 'Libre' : 'Occupé'}
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="single-slot-visual ${libre ? 'slot-libre' : 'slot-occupe'}">
+          <span class="slot-car-icon">${libre ? '🟢' : '🔴'}</span>
+          <span class="slot-status-text">${libre ? 'Available' : 'Occupied'}</span>
+        </div>
+        <div class="card-meta">
+          <div class="card-avail ${!libre ? 'is-full' : ''}">
+            Status: <span class="avail-num">${libre ? 'Free' : 'Taken'}</span>
+          </div>
+          <div>${formatPrice(price)}/hr</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill ${!libre ? 'is-high' : ''}" style="width:${pct}%"></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-reserve" data-id="${place.id_place}" ${!libre ? 'disabled' : ''}>
+          ${!libre ? '🚫 Slot Occupied' : '⚡ Reserve This Slot'}
+        </button>
+      </div>
+    </div>`;
 }
 
 function animateNum(id, target) {
   const el = document.getElementById(id);
   if (!el) return;
   const start = parseInt(el.textContent) || 0;
-  const dur   = 600; const t0 = performance.now();
+  const dur = 600; const t0 = performance.now();
   function frame(t) {
     const p = Math.min((t - t0) / dur, 1);
     el.textContent = Math.round(start + (target - start) * easeOut(p));
@@ -289,7 +296,6 @@ function animateNum(id, target) {
 }
 function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
 
-// Filter buttons
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -299,22 +305,21 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Refresh
 document.getElementById('refreshPlaces').addEventListener('click', loadPlaces);
 
-// Auto-refresh every 30s
 setInterval(() => {
   if (document.getElementById('view-places').classList.contains('active')) loadPlaces();
 }, 30000);
 
 /* ══════════════════════════════════════════════
    PAY MODAL
+   API: POST /pay → { place_id, user_id, amount }
 ══════════════════════════════════════════════ */
-const payModal     = document.getElementById('payModal');
+const payModal      = document.getElementById('payModal');
 const closePayModal = document.getElementById('closePayModal');
 
 function openPayModal(place) {
-  if (!state.token) {
+  if (!state.user) {
     openAuthModal('login');
     showToast('Please sign in to reserve a slot.', 'error');
     return;
@@ -323,36 +328,35 @@ function openPayModal(place) {
   state.currentPlace = place;
   state.duration     = 1;
 
-  document.getElementById('payPlaceName').textContent = place.name || `Lot #${place.id}`;
-  document.getElementById('payPlaceInfo').textContent = place.address || 'Confirm your reservation';
-  document.getElementById('payPlate').value = '';
-  document.getElementById('payError').textContent   = '';
-  document.getElementById('paySuccess').textContent = '';
-  document.getElementById('durValue').textContent   = '1';
+  document.getElementById('payPlaceName').textContent = placeLabel(place);
+  document.getElementById('payPlaceInfo').textContent = place.localisation || 'Confirm your reservation';
+  document.getElementById('payPlate').value           = '';
+  document.getElementById('payError').textContent     = '';
+  document.getElementById('paySuccess').textContent   = '';
+  document.getElementById('durValue').textContent     = '1';
 
-  updatePayDetails(place);
+  renderPayDetails(place);
   payModal.classList.add('open');
 }
 
-function updatePayDetails(place) {
-  const avail = availableSlots(place);
+function renderPayDetails(place) {
   const price = pricePerHour(place);
   document.getElementById('payDetails').innerHTML = `
     <div class="pay-detail-item">
-      <span class="pay-detail-label">Available</span>
-      <span class="pay-detail-val">${avail} slots</span>
+      <span class="pay-detail-label">Slot ID</span>
+      <span class="pay-detail-val">#${place.id_place}</span>
     </div>
     <div class="pay-detail-item">
       <span class="pay-detail-label">Rate</span>
-      <span class="pay-detail-val">${price ? formatPrice(price) + '/hr' : 'Free'}</span>
+      <span class="pay-detail-val">${formatPrice(price)}/hr</span>
     </div>
     <div class="pay-detail-item">
-      <span class="pay-detail-label">Lot ID</span>
-      <span class="pay-detail-val">#${place.id}</span>
+      <span class="pay-detail-label">Booked by</span>
+      <span class="pay-detail-val">${escHtml(state.user.prenom + ' ' + state.user.nom)}</span>
     </div>
     <div class="pay-detail-item">
       <span class="pay-detail-label">Status</span>
-      <span class="pay-detail-val" style="color:var(--accent)">Open</span>
+      <span class="pay-detail-val" style="color:var(--accent)">Libre ✓</span>
     </div>`;
   updateTotal();
 }
@@ -360,25 +364,31 @@ function updatePayDetails(place) {
 function updateTotal() {
   const price = pricePerHour(state.currentPlace);
   const total = price * state.duration;
-  document.getElementById('payTotal').textContent = total ? formatPrice(total) : 'Free';
+  document.getElementById('payTotal').textContent = formatPrice(total);
 }
 
-// Duration picker
 document.getElementById('durMinus').addEventListener('click', () => {
-  if (state.duration > 1) { state.duration--; document.getElementById('durValue').textContent = state.duration; updateTotal(); }
+  if (state.duration > 1) {
+    state.duration--;
+    document.getElementById('durValue').textContent = state.duration;
+    updateTotal();
+  }
 });
 document.getElementById('durPlus').addEventListener('click', () => {
-  if (state.duration < 24) { state.duration++; document.getElementById('durValue').textContent = state.duration; updateTotal(); }
+  if (state.duration < 24) {
+    state.duration++;
+    document.getElementById('durValue').textContent = state.duration;
+    updateTotal();
+  }
 });
 
 closePayModal.addEventListener('click', () => payModal.classList.remove('open'));
 payModal.addEventListener('click', e => { if (e.target === payModal) payModal.classList.remove('open'); });
 
-// Confirm pay
 document.getElementById('confirmPayBtn').addEventListener('click', async () => {
-  const plate  = document.getElementById('payPlate').value.trim().toUpperCase();
-  const errEl  = document.getElementById('payError');
-  const sucEl  = document.getElementById('paySuccess');
+  const plate = document.getElementById('payPlate').value.trim().toUpperCase();
+  const errEl = document.getElementById('payError');
+  const sucEl = document.getElementById('paySuccess');
   errEl.textContent = ''; sucEl.textContent = '';
 
   if (!plate) { errEl.textContent = 'Please enter your vehicle plate.'; return; }
@@ -386,57 +396,64 @@ document.getElementById('confirmPayBtn').addEventListener('click', async () => {
   const btn = document.getElementById('confirmPayBtn');
   btn.textContent = 'Processing…'; btn.disabled = true;
 
+  const price  = pricePerHour(state.currentPlace);
+  const amount = price * state.duration;
+
+  // POST /pay expects: place_id, user_id, amount
   const { ok, data } = await api('/pay', 'POST', {
-    place_id:  state.currentPlace.id,
+    place_id: state.currentPlace.id_place,
+    user_id:  state.user.id,
+    amount,
+    duration: state.duration,
     plate,
-    duration:  state.duration,
   });
 
   btn.textContent = 'Confirm & Reserve'; btn.disabled = false;
 
-  if (ok) {
-    sucEl.textContent = data.message || '✅ Slot reserved successfully!';
+  if (ok && data.status === 'success') {
+    sucEl.textContent = '✅ ' + (data.message || 'Slot reserved successfully!');
     showToast('Parking reserved! 🎉', 'success');
+    // Update slot in local state immediately
+    const idx = state.places.findIndex(p => p.id_place === state.currentPlace.id_place);
+    if (idx !== -1) state.places[idx].statut = 'occupe';
     setTimeout(() => {
       payModal.classList.remove('open');
       loadPlaces();
-    }, 1800);
+    }, 2000);
   } else {
     errEl.textContent = data.message || data.error || 'Payment failed. Please try again.';
   }
 });
 
 /* ══════════════════════════════════════════════
-   MISC
+   UTILITIES
 ══════════════════════════════════════════════ */
 function showToast(msg, type = '') {
   const toast = document.getElementById('toast');
   toast.textContent = msg;
-  toast.className   = 'toast show ' + type;
+  toast.className   = `toast show ${type}`;
   clearTimeout(toast._t);
   toast._t = setTimeout(() => { toast.className = 'toast'; }, 3500);
 }
 
 function formatPrice(n) {
-  if (!n) return 'Free';
-  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'MAD', minimumFractionDigits: 0, maximumFractionDigits: 2 })
-    .format(n).replace('MAD', 'MAD ');
+  if (!n && n !== 0) return 'Free';
+  return n.toFixed(2) + ' MAD';
 }
 
 function escHtml(str) {
-  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(str ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// Learn more scroll
 document.getElementById('learnMore')?.addEventListener('click', () => {
   document.getElementById('howItWorks')?.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Load stats on boot by silently fetching places for home view
+// Boot: silently load stats for home view
 (async () => {
   const { ok, data } = await api('/places');
-  if (ok && Array.isArray(data)) {
-    state.places = data;
-    updateStats(data);
-  }
+  const places = Array.isArray(data?.data) ? data.data : Array.isArray(data) ? data : [];
+  if (ok && places.length) { state.places = places; updateStats(places); }
 })();
