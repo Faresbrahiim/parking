@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ../src:/var/www/html
+      - ../backend/src:/var/www/html
     depends_on:
       db:
         condition: service_healthy
@@ -23,7 +23,7 @@ services:
       - "3307:3306"
     volumes:
     - db_data:/var/lib/mysql
-    - ../parking.sql:/docker-entrypoint-initdb.d/01-parking.sql:ro
+    - ../backend/parking.sql:/docker-entrypoint-initdb.d/01-parking.sql:ro
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s
