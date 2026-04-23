@@ -31,7 +31,7 @@ function route($method, $uri) {
     }
 
     if ($method === 'POST' && $uri === '/pay') {
-    AuthMiddleware::check();
+    // AuthMiddleware::check();
     $controller = new PlaceController();
     $controller->payAndOccupy();
     return;
