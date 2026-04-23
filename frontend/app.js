@@ -222,15 +222,23 @@ function renderPlaces() {
   });
 }
 
-/* ── Field helpers matching your DB schema ── */
-function isLibre(place) { return place.statut === 'libre'; }
-
-function placeLabel(place) {
-  return place.nom || place.name || place.location || `Slot #${place.id_place}`;
+/* ══════════════════════════════════════════════
+   SLOT HELPERS — matches your DB schema exactly
+   statut values: 'libre' | 'occupe' | 'handicapLibre' | 'handicapOccupe'
+══════════════════════════════════════════════ */
+function isLibre(place) {
+  return place.statut === 'libre' || place.statut === 'handicapLibre';
 }
-
+function isHandicap(place) {
+  return place.statut === 'handicapLibre' || place.statut === 'handicapOccupe';
+}
+function placeLabel(place) {
+  // numero = 'C5', zone = 'C'  →  "Zone C · C5"
+  if (place.numero) return place.numero;
+  return place.nom || place.name || `Slot #${place.id_place}`;
+}
 function pricePerHour(place) {
-  return Number(place.price_per_hour || place.price || place.tarif || 5); // default 5 MAD
+  return Number(place.price_per_hour || place.price || place.tarif || 5);
 }
 
 function updateStats(places) {
@@ -239,44 +247,92 @@ function updateStats(places) {
   animateNum('statTotal',    total);
   animateNum('statFree',     free);
   animateNum('statOccupied', total - free);
-  animateNum('statLots',     total);  // each row = one slot in your schema
+  animateNum('statLots',     [...new Set(places.map(p => p.zone).filter(Boolean))].length || total);
+}
+
+/* SVG car icon — inline, scales perfectly */
+function carSVG(color) {
+  return `<svg viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="car-svg">
+    <rect x="6" y="12" width="52" height="14" rx="4" fill="${color}" opacity="0.9"/>
+    <path d="M14 12 L20 4 H44 L50 12Z" fill="${color}"/>
+    <circle cx="16" cy="27" r="5" fill="#1a1d24" stroke="${color}" stroke-width="2"/>
+    <circle cx="48" cy="27" r="5" fill="#1a1d24" stroke="${color}" stroke-width="2"/>
+    <rect x="22" y="6" width="20" height="6" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+    <rect x="8" y="15" width="10" height="4" rx="1" fill="rgba(255,255,255,0.25)"/>
+    <rect x="46" y="15" width="10" height="4" rx="1" fill="rgba(255,255,255,0.25)"/>
+  </svg>`;
+}
+
+/* Wheelchair / handicap SVG */
+function handicapSVG(color) {
+  return `<svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="handicap-svg">
+    <circle cx="20" cy="5" r="4.5" fill="${color}"/>
+    <path d="M17 11 L14 26 L22 26 L26 36" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 17 L28 17" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="20" cy="39" r="7" stroke="${color}" stroke-width="3" fill="none"/>
+    <path d="M26 43 L30 47" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>`;
 }
 
 function placeCardHTML(place, idx) {
-  const libre  = isLibre(place);
-  const price  = pricePerHour(place);
-  const name   = placeLabel(place);
-  const pct    = libre ? 0 : 100;
+  const libre    = isLibre(place);
+  const handicap = isHandicap(place);
+  const price    = pricePerHour(place);
+  const numero   = place.numero  || `#${place.id_place}`;
+  const zone     = place.zone    || '—';
+
+  const carColor       = libre ? '#00e5a0' : '#ff4d6d';
+  const handicapColor  = libre ? '#60a5fa' : '#f87171';
+  const cardClass      = `place-card ${!libre ? 'is-full' : ''} ${handicap ? 'is-handicap' : ''}`;
+
+  const slotIcon = handicap
+    ? `<div class="slot-icon-wrap handicap-wrap">${handicapSVG(handicapColor)}</div>`
+    : `<div class="slot-icon-wrap car-wrap">${carSVG(carColor)}</div>`;
+
+  const statusLabel = handicap
+    ? (libre ? '♿ Handicap — Libre' : '♿ Handicap — Occupé')
+    : (libre ? 'Libre' : 'Occupé');
 
   return `
-    <div class="place-card ${!libre ? 'is-full' : ''}" style="animation-delay:${idx * 50}ms">
+    <div class="${cardClass}" style="animation-delay:${idx * 50}ms">
       <div class="card-top">
-        <div>
-          <div class="card-name">${escHtml(name)}</div>
-          <div class="card-id">Slot ID: ${place.id_place}${place.localisation ? ' · ' + escHtml(place.localisation) : ''}</div>
+        <div class="card-title-group">
+          <div class="card-name">
+            ${handicap ? '<span class="handi-tag">♿</span>' : ''}
+            Zone <strong>${escHtml(zone)}</strong> · ${escHtml(numero)}
+          </div>
+          <div class="card-id">Slot ID: ${place.id_place}</div>
         </div>
-        <span class="card-badge ${libre ? 'badge-available' : 'badge-full'}">
-          ${libre ? 'Libre' : 'Occupé'}
+        <span class="card-badge ${libre ? (handicap ? 'badge-handicap' : 'badge-available') : 'badge-full'}">
+          ${libre ? (handicap ? '♿ Free' : 'Libre') : 'Occupé'}
         </span>
       </div>
+
       <div class="card-body">
-        <div class="single-slot-visual ${libre ? 'slot-libre' : 'slot-occupe'}">
-          <span class="slot-car-icon">${libre ? '🟢' : '🔴'}</span>
-          <span class="slot-status-text">${libre ? 'Available' : 'Occupied'}</span>
-        </div>
-        <div class="card-meta">
-          <div class="card-avail ${!libre ? 'is-full' : ''}">
-            Status: <span class="avail-num">${libre ? 'Free' : 'Taken'}</span>
+        <div class="slot-visual-box ${libre ? 'box-libre' : 'box-occupe'} ${handicap ? 'box-handicap' : ''}">
+          <div class="slot-road-lines">
+            <div class="road-line"></div>
+            <div class="road-line"></div>
           </div>
+          ${slotIcon}
+          <div class="slot-label-row">
+            <span class="slot-num-label">${escHtml(numero)}</span>
+            <span class="slot-status-pill ${libre ? 'pill-libre' : 'pill-occupe'}">${statusLabel}</span>
+          </div>
+        </div>
+
+        <div class="card-meta">
+          <div>Zone: <strong>${escHtml(zone)}</strong></div>
           <div>${formatPrice(price)}/hr</div>
         </div>
-        <div class="progress-bar">
-          <div class="progress-fill ${!libre ? 'is-high' : ''}" style="width:${pct}%"></div>
-        </div>
       </div>
+
       <div class="card-footer">
-        <button class="btn-reserve" data-id="${place.id_place}" ${!libre ? 'disabled' : ''}>
-          ${!libre ? '🚫 Slot Occupied' : '⚡ Reserve This Slot'}
+        <button class="btn-reserve ${handicap ? 'btn-reserve-handicap' : ''}"
+                data-id="${place.id_place}" ${!libre ? 'disabled' : ''}>
+          ${!libre
+            ? (handicap ? '♿ Slot Occupied' : '🚫 Slot Occupied')
+            : (handicap ? '♿ Reserve Handicap Slot' : '⚡ Reserve This Slot')}
         </button>
       </div>
     </div>`;
@@ -328,23 +384,40 @@ function openPayModal(place) {
   state.currentPlace = place;
   state.duration     = 1;
 
-  document.getElementById('payPlaceName').textContent = placeLabel(place);
-  document.getElementById('payPlaceInfo').textContent = place.localisation || 'Confirm your reservation';
-  document.getElementById('payPlate').value           = '';
-  document.getElementById('payError').textContent     = '';
-  document.getElementById('paySuccess').textContent   = '';
-  document.getElementById('durValue').textContent     = '1';
+  const numero = place.numero || `#${place.id_place}`;
+  const zone   = place.zone   || '—';
+  const handicap = isHandicap(place);
+
+  document.getElementById('payPlaceName').textContent = `Zone ${zone} · ${numero}`;
+  document.getElementById('payPlaceInfo').textContent = handicap
+    ? '♿ Handicap accessible slot'
+    : 'Standard parking slot';
+  document.getElementById('payError').textContent   = '';
+  document.getElementById('paySuccess').textContent = '';
+  document.getElementById('durValue').textContent   = '1';
 
   renderPayDetails(place);
   payModal.classList.add('open');
 }
 
 function renderPayDetails(place) {
-  const price = pricePerHour(place);
+  const price    = pricePerHour(place);
+  const handicap = isHandicap(place);
+  const zone     = place.zone   || '—';
+  const numero   = place.numero || `#${place.id_place}`;
+
   document.getElementById('payDetails').innerHTML = `
     <div class="pay-detail-item">
-      <span class="pay-detail-label">Slot ID</span>
-      <span class="pay-detail-val">#${place.id_place}</span>
+      <span class="pay-detail-label">Slot</span>
+      <span class="pay-detail-val">${escHtml(numero)}</span>
+    </div>
+    <div class="pay-detail-item">
+      <span class="pay-detail-label">Zone</span>
+      <span class="pay-detail-val">${escHtml(zone)}</span>
+    </div>
+    <div class="pay-detail-item">
+      <span class="pay-detail-label">Type</span>
+      <span class="pay-detail-val">${handicap ? '♿ Handicap' : '🚗 Standard'}</span>
     </div>
     <div class="pay-detail-item">
       <span class="pay-detail-label">Rate</span>
@@ -352,7 +425,7 @@ function renderPayDetails(place) {
     </div>
     <div class="pay-detail-item">
       <span class="pay-detail-label">Booked by</span>
-      <span class="pay-detail-val">${escHtml(state.user.prenom + ' ' + state.user.nom)}</span>
+      <span class="pay-detail-val">${escHtml((state.user.prenom || '') + ' ' + (state.user.nom || ''))}</span>
     </div>
     <div class="pay-detail-item">
       <span class="pay-detail-label">Status</span>
@@ -386,12 +459,9 @@ closePayModal.addEventListener('click', () => payModal.classList.remove('open'))
 payModal.addEventListener('click', e => { if (e.target === payModal) payModal.classList.remove('open'); });
 
 document.getElementById('confirmPayBtn').addEventListener('click', async () => {
-  const plate = document.getElementById('payPlate').value.trim().toUpperCase();
   const errEl = document.getElementById('payError');
   const sucEl = document.getElementById('paySuccess');
   errEl.textContent = ''; sucEl.textContent = '';
-
-  if (!plate) { errEl.textContent = 'Please enter your vehicle plate.'; return; }
 
   const btn = document.getElementById('confirmPayBtn');
   btn.textContent = 'Processing…'; btn.disabled = true;
@@ -399,13 +469,11 @@ document.getElementById('confirmPayBtn').addEventListener('click', async () => {
   const price  = pricePerHour(state.currentPlace);
   const amount = price * state.duration;
 
-  // POST /pay expects: place_id, user_id, amount
   const { ok, data } = await api('/pay', 'POST', {
     place_id: state.currentPlace.id_place,
     user_id:  state.user.id,
     amount,
     duration: state.duration,
-    plate,
   });
 
   btn.textContent = 'Confirm & Reserve'; btn.disabled = false;
@@ -413,9 +481,11 @@ document.getElementById('confirmPayBtn').addEventListener('click', async () => {
   if (ok && data.status === 'success') {
     sucEl.textContent = '✅ ' + (data.message || 'Slot reserved successfully!');
     showToast('Parking reserved! 🎉', 'success');
-    // Update slot in local state immediately
     const idx = state.places.findIndex(p => p.id_place === state.currentPlace.id_place);
-    if (idx !== -1) state.places[idx].statut = 'occupe';
+    if (idx !== -1) {
+      // preserve handicap type when marking occupied
+      state.places[idx].statut = isHandicap(state.currentPlace) ? 'handicapOccupe' : 'occupe';
+    }
     setTimeout(() => {
       payModal.classList.remove('open');
       loadPlaces();
