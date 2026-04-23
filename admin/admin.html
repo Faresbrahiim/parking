@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+
+	<!-- Chart.js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css?v=20260412">
+
+	<title>AdminHub</title>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#dashboard" data-page="dashboard">
+					<i class='bx bxs-dashboard bx-sm' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#localiser" data-page="localiser">
+					<i class='bx bx-current-location bx-sm' ></i>
+					<span class="text">Localiser véhicule</span>
+				</a>
+			</li>
+			<li>
+				<a href="#occupation" data-page="occupation">
+					<i class='bx bx-grid-alt bx-sm' ></i>
+					<span class="text">Occupation</span>
+				</a>
+			</li>
+			<li>
+				<a href="#historique" data-page="historique">
+					<i class='bx bx-history bx-sm' ></i>
+					<span class="text">Historique</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu bottom">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog bx-sm bx-spin-hover' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="../login%20page/logout.php" class="logout">
+					<i class='bx bx-power-off bx-sm bx-burst-hover' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+<nav>
+    <i class='bx bx-menu bx-sm' ></i>
+    <a href="#" class="nav-link">Categories</a>
+    <form action="#">
+        <div class="form-input">
+            <input type="search" placeholder="Search...">
+            <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+        </div>
+    </form>
+</nav>
+<!-- NAVBAR -->
+
+
+		<!-- MAIN -->
+		<main>
+			<!-- PAGES -->
+			<section class="page active" data-page="dashboard">
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download bx-fade-down-hover' ></i>
+					<span class="text">Get PDF</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>1020</h3>
+						<p>New Order</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>2834</h3>
+						<p>Visitors</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>N$2543.00</h3>
+						<p>Total Sales</p>
+					</span>
+				</li>
+			</ul>
+
+
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>Recent Orders</h3>
+							<i class='bx bx-search' ></i>
+							<i class='bx bx-filter' ></i>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>User</th>
+									<th>Date Order</th>
+									<th>Status</th>
+									<th>Montant</th>
+								</tr>
+							</thead>
+							<tbody id="recent-reservations-body">
+								<tr><td colspan="4" style="opacity:.75;">Chargement...</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="todo">
+						<div class="head">
+							<h3>Statistiques</h3>
+						</div>
+						<div id="dashboard-stats-container">
+							<canvas id="occupationChart" width="400" height="200"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<!-- Additional Charts Section -->
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>Revenus Journaliers (30 jours)</h3>
+						</div>
+						<canvas id="revenueChart" width="400" height="200"></canvas>
+					</div>
+					<div class="todo">
+						<div class="head">
+							<h3>Entrées par Zone</h3>
+						</div>
+						<canvas id="zoneChart" width="400" height="200"></canvas>
+					</div>
+				</div>
+			</section>
+
+			<section class="page" data-page="localiser">
+				<div class="head-title">
+					<div class="left">
+						<h1>Localiser véhicule</h1>
+						<ul class="breadcrumb">
+							<li><a href="#">Parking</a></li>
+							<li><i class='bx bx-chevron-right' ></i></li>
+							<li><a class="active" href="#">Localisation</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>Recherche véhicule</h3>
+						</div>
+						<div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+							<input class="form-control" style="max-width:320px; padding:10px 14px; border-radius:10px; border:1px solid rgba(46,170,193,.35); background:#2a323f; color:#fff;" placeholder="Matricule / Ticket / Email" />
+							<a class="btn-download" href="#" style="background:#2EAAC1; color:#0b1120;">
+								<i class='bx bx-search'></i><span class="text">Localiser</span>
+							</a>
+						</div>
+						<p style="margin-top:14px; opacity:.9;">Résultat: <strong>Zone A</strong> — Place <strong>A-12</strong> (exemple).</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="page" data-page="occupation">
+				<div class="head-title">
+					<div class="left">
+						<h1>Occupation</h1>
+						<ul class="breadcrumb">
+							<li><a href="#">Parking</a></li>
+							<li><i class='bx bx-chevron-right' ></i></li>
+							<li><a class="active" href="#">Occupation</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="box-info">
+					<li>
+						<i class='bx bx-car' ></i>
+						<span class="text"><h3>38</h3><p>Places occupées</p></span>
+					</li>
+					<li>
+						<i class='bx bx-parking' ></i>
+						<span class="text"><h3>12</h3><p>Places libres</p></span>
+					</li>
+					<li>
+						<i class='bx bx-timer' ></i>
+						<span class="text"><h3>7</h3><p>Réservations</p></span>
+					</li>
+				</ul>
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>Résumé par zone</h3>
+						</div>
+						<table>
+							<thead><tr><th>Zone</th><th>Occupées</th><th>Libres</th></tr></thead>
+							<tbody>
+								<tr><td>Zone A</td><td>14</td><td>6</td></tr>
+								<tr><td>Zone B</td><td>16</td><td>4</td></tr>
+								<tr><td>Zone C</td><td>8</td><td>2</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section class="page" data-page="historique">
+				<div class="head-title">
+					<div class="left">
+						<h1>Historique</h1>
+						<ul class="breadcrumb">
+							<li><a href="#">Parking</a></li>
+							<li><i class='bx bx-chevron-right' ></i></li>
+							<li><a class="active" href="#">Historique</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-data">
+					<div class="order historique-order">
+						<div class="head">
+							<h3>Dernières activités</h3>
+						</div>
+						<p class="historique-hint">Comme une caméra d’entrée : la colonne <strong>Photo</strong> montre l’image enregistrée ; le <strong>matricule détecté</strong> est celui lu sur la plaque (OCR). Sans Python/EasyOCR, les photos non lues vont dans <code>parking/echec_ocr</code>.</p>
+						<table class="historique-table">
+							<thead><tr><th>Photo</th><th>Matricule détecté</th><th>Entrée</th><th>Sortie</th><th>Durée (min)</th><th>Statut</th></tr></thead>
+							<tbody id="historique-plaques-body">
+								<tr><td colspan="6" style="opacity:.75;">Chargement…</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js?v=20260412b"></script>
+</body>
+</html>            

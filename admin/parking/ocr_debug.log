@@ -1,0 +1,683 @@
+[2026-04-19 05:02:06] --- Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 05:02:10] platerecognizer: «789046»
+[2026-04-19 05:03:10] easyocr lettre: «ه» conf=0.86
+[2026-04-19 05:03:10] matricule corrigé: «78904ه6»
+[2026-04-19 05:05:46] --- Capture d’écran 2026-04-17 232606.png ---
+[2026-04-19 05:06:32] platerecognizer: «13942»
+[2026-04-19 05:06:57] easyocr lettre: «ب» conf=1.84
+[2026-04-19 05:07:30] matricule corrigé: «13942ب»
+[2026-04-19 05:09:58] --- Capture d’écran 2026-04-17 232606.png ---
+[2026-04-19 05:10:45] platerecognizer: «13942»
+[2026-04-19 05:11:09] easyocr lettre: «ب» conf=1.84
+[2026-04-19 05:11:33] matricule corrigé: «13942ب»
+[2026-04-19 05:11:38] --- test_photo3.png ---
+[2026-04-19 05:11:42] platerecognizer: «789046»
+[2026-04-19 05:12:06] easyocr lettre: «ه» conf=0.86
+[2026-04-19 05:12:06] matricule corrigé: «78904ه6»
+[2026-04-19 05:14:42] --- Capture d’écran 2026-04-17 234842.png ---
+[2026-04-19 05:15:31] platerecognizer: «3721أ5»
+[2026-04-19 05:15:55] easyocr lettre: «أ» conf=0.07
+[2026-04-19 05:25:36] --- Capture d’écran 2026-04-19 001149.png ---
+[2026-04-19 05:25:37] platerecognizer: «23456ب0»
+[2026-04-19 05:26:06] --- Capture d’écran 2026-04-17 234842.png ---
+[2026-04-19 05:26:55] platerecognizer: «3721أ5»
+[2026-04-19 05:27:20] easyocr lettre: «أ» conf=0.07
+[2026-04-19 05:27:46] --- Capture d’écran 2026-04-07 032207.png ---
+[2026-04-19 05:28:02] platerecognizer: «6552ب8»
+[2026-04-19 05:28:36] easyocr lettre: «أ» conf=0.19
+[2026-04-19 05:28:54] --- Capture d’écran 2026-04-19 001225.png ---
+[2026-04-19 05:29:08] platerecognizer: «73215»
+[2026-04-19 05:29:32] easyocr lettre: «أ» conf=1.95
+[2026-04-19 05:30:00] suffixe région (EasyOCR): «5»
+[2026-04-19 05:30:00] matricule corrigé: «73215أ»
+[2026-04-19 12:53:19] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 12:53:26] platerecognizer: «83092أ72»
+[2026-04-19 12:54:26] --- Capture d’écran 2026-04-19 125232.png ---
+[2026-04-19 12:54:30] platerecognizer: «46763أ7»
+[2026-04-19 13:04:15] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 13:04:22] platerecognizer: «46763أ7»
+[2026-04-19 13:21:50] --- pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png ---
+[2026-04-19 13:21:54] platerecognizer: «789046»
+[2026-04-19 13:23:04] easyocr lettre: «ه» conf=0.86
+[2026-04-19 13:23:04] matricule corrigé: «78904ه6»
+[2026-04-19 13:24:20] --- pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png ---
+[2026-04-19 13:24:24] platerecognizer: «789046»
+[2026-04-19 13:25:02] easyocr lettre: «ه» conf=0.86
+[2026-04-19 13:25:02] matricule corrigé: «78904ه6»
+[2026-04-19 13:35:06] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 13:35:11] platerecognizer: «789046»
+[2026-04-19 13:35:56] easyocr lettre: «ه» conf=0.86
+[2026-04-19 13:35:56] matricule corrigé: «78904ه6»
+[2026-04-19 13:37:24] --- entree_20260418_011409_entree_20260418_005951_Capture d’écran 2026-04-17 232606.png ---
+[2026-04-19 13:38:11] platerecognizer: «13942»
+[2026-04-19 13:38:49] easyocr lettre: «ب» conf=1.84
+[2026-04-19 14:39:53] PHP récupéré résultat via fichier secours: entree_20260418_011409_entree_20260418_005951_Capture d’écran 2026-04-17 232606.png.result.json
+[2026-04-19 13:40:39] --- entree_20260418_011409_entree_20260418_005951_Capture d’écran 2026-04-17 232606.png ---
+[2026-04-19 13:41:28] platerecognizer: «13942»
+[2026-04-19 13:42:04] easyocr lettre: «ب» conf=1.84
+[2026-04-19 14:43:29] PHP récupéré résultat via fichier secours: entree_20260418_011409_entree_20260418_005951_Capture d’écran 2026-04-17 232606.png.result.json
+[2026-04-19 13:44:19] --- dup_entree_20260417_214832_resultat_voiture.jpeg ---
+[2026-04-19 13:44:21] platerecognizer: «23242أ55»
+[2026-04-19 13:44:45] --- dup_entree_20260417_214547_Capture d’écran 2026-04-16 195121.png ---
+[2026-04-19 13:44:59] platerecognizer: «3938أ6»
+[2026-04-19 13:46:41] --- Capture d’écran 2026-04-19 125232.png ---
+[2026-04-19 13:46:45] platerecognizer: «46763أ7»
+[2026-04-19 13:47:33] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 13:47:37] platerecognizer: «83092أ72»
+[2026-04-19 13:48:01] --- Capture d’écran 2026-04-17 234842.png ---
+[2026-04-19 13:48:52] platerecognizer: «3721أ5»
+[2026-04-19 13:49:32] easyocr lettre: «أ» conf=0.07
+[2026-04-19 13:53:10] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 13:53:13] platerecognizer: «32107أ6»
+[2026-04-19 13:55:26] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 13:55:29] platerecognizer: «32107أ6»
+[2026-04-19 14:59:46] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 14:59:49] platerecognizer: «32107أ6»
+[2026-04-19 15:03:15] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:03:18] platerecognizer: «32107أ6»
+[2026-04-19 15:09:21] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:09:24] platerecognizer: «32107أ6»
+[2026-04-19 15:11:14] --- dup_entree_20260417_214547_Capture d’écran 2026-04-16 195121.png ---
+[2026-04-19 15:11:32] platerecognizer: «3938أ6»
+[2026-04-19 15:15:24] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:15:27] platerecognizer: «32107أ6»
+[2026-04-19 15:17:45] --- c__Users_asosh_AppData_Roaming_Cursor_User_workspaceStorage_f15823e77997455ba6080fd31808fc7e_images_image-a7d3a3a5-7328-4a5d-aeb8-317208d6f00e.png ---
+[2026-04-19 15:18:26] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 15:20:43] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:20:47] platerecognizer: «32107أ6»
+[2026-04-19 15:21:47] easyocr lettre: (aucun glyphe arabe sur les crops — garde lettre PR)
+[2026-04-19 16:23:29] PHP récupéré résultat via fichier secours: Capture d’écran 2026-04-19 135217.png.result.json
+[2026-04-19 15:28:05] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:28:16] platerecognizer: «32107أ6»
+[2026-04-19 15:29:17] easyocr: 1ʳᵉ passe sans lettre — 2ᵉ passe (HR + RGB + seuils CRAFT + image entière)
+[2026-04-19 16:30:21] PHP récupéré résultat via fichier secours: Capture d’écran 2026-04-19 135217.png.result.json
+[2026-04-19 15:34:10] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:34:15] platerecognizer: «32107أ6»
+[2026-04-19 15:35:14] easyocr lettre: (aucun glyphe arabe sur les crops — garde lettre PR)
+[2026-04-19 15:37:40] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 15:37:43] platerecognizer: «32107أ6»
+[2026-04-19 15:38:45] easyocr lettre: (aucun glyphe arabe sur les crops — garde lettre PR)
+[2026-04-19 15:38:45] PFA_FIX_ALIF_TO_WAW_PATTERN: «32107أ6» → «32107و6»
+[2026-04-19 15:39:23] --- dup_entree_20260417_214547_Capture d’écran 2026-04-16 195121.png ---
+[2026-04-19 15:39:37] platerecognizer: «3938أ6»
+[2026-04-19 15:40:37] easyocr lettre: (aucun glyphe arabe sur les crops — garde lettre PR)
+[2026-04-19 15:40:37] PFA_FIX_ALIF_TO_WAW_PATTERN: «3938أ6» → «3938و6»
+[2026-04-19 15:41:15] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 15:41:19] platerecognizer: «83092أ72»
+[2026-04-19 15:42:31] easyocr lettre: «ي» conf=1.12
+[2026-04-19 15:42:31] matricule corrigé: «83092ي72»
+[2026-04-19 15:48:10] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 15:48:14] platerecognizer: «83092أ72»
+[2026-04-19 15:49:20] easyocr lettre: «ي» conf=1.12
+[2026-04-19 15:49:20] matricule corrigé: «83092ي72»
+[2026-04-19 15:50:59] --- Capture d’écran 2026-04-19 125232.png ---
+[2026-04-19 15:51:04] platerecognizer: «46763أ7»
+[2026-04-19 15:52:17] easyocr lettre: «أ» conf=0.39
+[2026-04-19 16:01:08] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 16:01:13] platerecognizer: «83092أ72»
+[2026-04-19 16:02:20] easyocr lettre: «ي» conf=1.12
+[2026-04-19 16:02:20] matricule corrigé: «83092ي72»
+[2026-04-19 16:03:10] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 16:03:14] platerecognizer: «83092أ72»
+[2026-04-19 16:04:22] easyocr lettre: «ي» conf=1.12
+[2026-04-19 16:04:22] matricule corrigé: «83092ي72»
+[2026-04-19 16:05:12] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 16:05:19] platerecognizer: «32107أ6»
+[2026-04-19 16:06:16] easyocr lettre: (aucun glyphe arabe sur les crops — garde lettre PR)
+[2026-04-19 16:14:07] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 16:14:13] platerecognizer: «32107أ6»
+[2026-04-19 16:14:13] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:16:50] --- Capture d’écran 2026-04-19 125202.png ---
+[2026-04-19 16:16:54] platerecognizer: «83092أ72»
+[2026-04-19 16:16:54] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:17:54] --- Capture d’écran 2026-04-19 125232.png ---
+[2026-04-19 16:18:00] platerecognizer: «46763أ7»
+[2026-04-19 16:18:00] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:18:12] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 16:18:16] platerecognizer: «32107أ6»
+[2026-04-19 16:18:16] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:18:41] --- dup_entree_20260417_214547_Capture d’écran 2026-04-16 195121.png ---
+[2026-04-19 16:18:55] platerecognizer: «3938أ6»
+[2026-04-19 16:18:55] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:19:07] --- dup_entree_20260417_214832_resultat_voiture.jpeg ---
+[2026-04-19 16:19:11] platerecognizer: «23242أ55»
+[2026-04-19 16:19:11] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:19:36] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 16:19:40] platerecognizer: «789046»
+[2026-04-19 16:19:40] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:20:29] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 16:20:35] platerecognizer: «789046»
+[2026-04-19 16:20:35] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:26:12] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 16:26:17] platerecognizer: «789046»
+[2026-04-19 16:26:17] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:28:05] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 16:28:10] platerecognizer: «32107أ6»
+[2026-04-19 16:28:10] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 16:37:00] --- Capture d’écran 2026-04-19 125232.png ---
+[2026-04-19 16:37:05] platerecognizer: «46763أ7»
+[2026-04-19 17:38:07] PHP récupéré résultat via fichier secours: Capture d’écran 2026-04-19 125232.png.result.json
+[2026-04-19 16:38:31] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 16:38:35] platerecognizer: «32107أ6»
+[2026-04-19 17:35:13] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 17:35:16] platerecognizer: «32107أ6»
+[2026-04-19 17:35:16] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 17:46:53] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 17:46:56] platerecognizer: «32107أ6»
+[2026-04-19 17:46:56] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 17:51:57] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 17:52:00] platerecognizer: «789046»
+[2026-04-19 17:52:00] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 17:56:37] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 17:56:41] platerecognizer: «789046»
+[2026-04-19 17:56:41] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 18:01:30] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 18:01:34] platerecognizer: «789046»
+[2026-04-19 18:01:34] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 18:08:22] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 18:08:26] platerecognizer: «789046»
+[2026-04-19 18:08:26] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 18:23:26] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 18:23:30] platerecognizer: «789046»
+[2026-04-19 18:23:30] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 18:26:07] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 18:26:11] platerecognizer: «789046»
+[2026-04-19 18:26:11] PFA_SKIP_EASYOCR_LETTER=1 : pas YOLO/EasyOCR lettre (rapide)
+[2026-04-19 18:29:47] --- Capture d’écran 2026-04-19 135217.png ---
+[2026-04-19 18:29:53] platerecognizer: «32107أ6»
+[2026-04-19 18:29:53] PFA_EASYOCR_DISAMBIG_ALIF=1 : relecture EasyOCR lettre (PR a « أ » → désambig. ه/و/…))
+[2026-04-19 19:30:34] PHP récupéré résultat via fichier secours: Capture d’écran 2026-04-19 135217.png.result.json
+[2026-04-19 18:30:46] --- entree_20260419_060311_Capture d’écran 2026-04-16 195243.png ---
+[2026-04-19 18:30:50] platerecognizer: «789046»
+[2026-04-19 18:30:50] PFA_EASYOCR_DISAMBIG_ALIF=1 : relecture EasyOCR lettre (chiffres fusionnés PR sans lettre → insérer ه/و/…)
+[2026-04-19 19:31:21] PHP récupéré résultat via fichier secours: entree_20260419_060311_Capture d’écran 2026-04-16 195243.png.result.json
+[2026-04-19 18:35:46] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-19 18:35:49] platerecognizer: «83092أ72»
+[2026-04-19 18:36:13] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 18:36:17] platerecognizer: «46763أ7»
+[2026-04-19 18:36:41] --- pfa_ocr_f4d3fbad527dc1100b1f1169240fa5fd36bb3a2d724bb89d15308001fc626d42.png ---
+[2026-04-19 18:36:45] platerecognizer: «32107أ6»
+[2026-04-19 18:37:09] --- pfa_ocr_d874ca33f355e15f74d46c9b8f8870e40853b10295297aba807247c2b558bc8f.png ---
+[2026-04-19 18:37:22] platerecognizer: «3938أ6»
+[2026-04-19 19:38:11] PHP récupéré résultat via fichier secours: pfa_ocr_d874ca33f355e15f74d46c9b8f8870e40853b10295297aba807247c2b558bc8f.png.result.json
+[2026-04-19 18:38:36] --- pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png ---
+[2026-04-19 18:38:40] platerecognizer: «789046»
+[2026-04-19 19:40:12] PHP récupéré résultat via fichier secours: pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png.result.json
+[2026-04-19 18:48:18] --- pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png ---
+[2026-04-19 18:48:23] platerecognizer: «789046»
+[2026-04-19 19:48:55] PHP récupéré résultat via fichier secours: pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png.result.json
+[2026-04-19 18:52:20] --- pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png ---
+[2026-04-19 18:52:24] platerecognizer: «789046»
+[2026-04-19 19:53:19] PHP récupéré résultat via fichier secours: pfa_ocr_dc859b02ac44ccd4c352872a3de5ec97c4c11260e6f3561f05c42830a496a66d.png.result.json
+[2026-04-19 18:53:32] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 18:53:36] platerecognizer: «46763أ7»
+[2026-04-19 18:58:00] --- pfa_ocr_f4d3fbad527dc1100b1f1169240fa5fd36bb3a2d724bb89d15308001fc626d42.png ---
+[2026-04-19 18:58:03] platerecognizer: «32107أ6»
+[2026-04-19 18:58:15] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 18:58:18] platerecognizer: «46763أ7»
+[2026-04-19 19:01:19] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:01:22] platerecognizer: «46763أ7»
+[2026-04-19 20:02:24] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 19:11:25] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:11:29] platerecognizer: «46763أ7»
+[2026-04-19 20:12:05] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 19:50:00] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-19 19:50:06] platerecognizer: «83092أ72»
+[2026-04-19 19:50:51] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:51:24] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:51:57] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:52:05] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:52:13] platerecognizer: «46763أ7»
+[2026-04-19 19:53:08] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:53:42] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:54:16] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:54:24] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:54:31] platerecognizer: «46763أ7»
+[2026-04-19 19:55:13] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:55:45] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:56:18] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:56:26] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:56:37] platerecognizer: «46763أ7»
+[2026-04-19 19:57:21] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:57:54] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:58:27] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 19:58:34] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:58:47] platerecognizer: «46763أ7»
+[2026-04-19 19:59:30] easyocr lettre: «أ» conf=0.39
+[2026-04-19 19:59:38] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 19:59:52] platerecognizer: «46763أ7»
+[2026-04-19 21:01:38] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 20:01:44] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:01:48] platerecognizer: «46763أ7»
+[2026-04-19 20:02:25] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:02:32] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:02:36] platerecognizer: «46763أ7»
+[2026-04-19 20:03:13] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:03:20] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:03:24] platerecognizer: «46763أ7»
+[2026-04-19 20:04:07] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:04:15] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:04:21] platerecognizer: «46763أ7»
+[2026-04-19 20:05:19] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:05:27] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:05:31] platerecognizer: «46763أ7»
+[2026-04-19 20:06:11] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:06:18] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:06:23] platerecognizer: «46763أ7»
+[2026-04-19 20:07:02] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:07:10] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:07:14] platerecognizer: «46763أ7»
+[2026-04-19 20:08:05] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:08:13] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:08:22] platerecognizer: «46763أ7»
+[2026-04-19 20:09:04] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:09:11] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:09:18] platerecognizer: «46763أ7»
+[2026-04-19 20:09:59] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:10:07] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:10:15] platerecognizer: «46763أ7»
+[2026-04-19 20:10:55] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:11:03] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:11:07] platerecognizer: «46763أ7»
+[2026-04-19 20:11:48] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:11:56] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:12:00] platerecognizer: «46763أ7»
+[2026-04-19 20:12:42] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:12:51] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:12:56] platerecognizer: «46763أ7»
+[2026-04-19 20:13:34] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:13:41] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:13:50] platerecognizer: «46763أ7»
+[2026-04-19 21:14:56] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 20:15:02] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:15:08] platerecognizer: «46763أ7»
+[2026-04-19 21:16:04] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 20:16:10] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:16:14] platerecognizer: «46763أ7»
+[2026-04-19 20:17:16] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:17:24] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:17:33] platerecognizer: «46763أ7»
+[2026-04-19 20:18:10] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:18:12] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:18:16] platerecognizer: «46763أ7»
+[2026-04-19 20:18:54] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:19:02] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:19:07] platerecognizer: «46763أ7»
+[2026-04-19 20:19:44] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:19:51] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:19:55] platerecognizer: «46763أ7»
+[2026-04-19 20:20:30] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:20:38] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:20:42] platerecognizer: «46763أ7»
+[2026-04-19 20:21:18] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:21:25] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:21:29] platerecognizer: «46763أ7»
+[2026-04-19 20:22:05] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:22:13] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:22:17] platerecognizer: «46763أ7»
+[2026-04-19 20:22:54] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:23:02] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:23:08] platerecognizer: «46763أ7»
+[2026-04-19 20:23:59] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:24:08] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:24:26] platerecognizer: «46763أ7»
+[2026-04-19 21:25:51] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 20:25:57] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:26:05] platerecognizer: «46763أ7»
+[2026-04-19 20:26:51] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:26:58] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:27:03] platerecognizer: «46763أ7»
+[2026-04-19 20:27:43] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:27:50] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:27:54] platerecognizer: «46763أ7»
+[2026-04-19 20:28:32] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:28:40] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:28:45] platerecognizer: «46763أ7»
+[2026-04-19 20:29:30] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:29:33] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:29:38] platerecognizer: «46763أ7»
+[2026-04-19 20:30:33] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:30:41] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:30:45] platerecognizer: «46763أ7»
+[2026-04-19 20:31:52] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:32:01] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:32:42] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:32:42] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:32:48] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:33:29] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:33:30] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:33:36] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:34:17] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:34:17] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:34:23] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:34:51] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:34:51] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:34:58] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:35:36] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:35:36] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:35:43] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:35:47] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:35:48] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:35:54] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:36:07] platerecognizer: «46763أ7»
+[2026-04-19 20:37:16] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:37:25] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:37:37] platerecognizer: «46763أ7»
+[2026-04-19 20:38:24] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:38:26] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:39:07] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:39:07] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:39:13] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:39:54] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:39:54] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:40:01] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:40:19] platerecognizer: «46763أ7»
+[2026-04-19 20:40:55] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:41:03] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:41:19] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:41:19] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:41:25] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:41:31] platerecognizer: «46763أ7»
+[2026-04-19 20:42:12] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:42:20] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:42:25] platerecognizer: «46763أ7»
+[2026-04-19 20:43:04] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:43:11] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:43:17] platerecognizer: «46763أ7»
+[2026-04-19 20:43:53] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:44:00] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:44:34] platerecognizer: «46763أ7»
+[2026-04-19 20:45:11] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:45:18] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:45:59] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:45:59] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:46:06] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:46:45] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:46:46] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:46:52] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:46:57] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:46:57] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:47:03] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:47:19] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:47:19] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:47:25] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:47:49] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:47:49] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:47:55] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:47:59] platerecognizer: «46763أ7»
+[2026-04-19 20:48:43] easyocr lettre: «أ» conf=0.39
+[2026-04-19 20:48:53] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:49:34] platerecognizer: pas d'internet (timeout après 3 essais) — ABANDON (pas de fallback local)
+[2026-04-19 21:49:34] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:49:40] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:50:15] platerecognizer: «46763أ7»
+[2026-04-19 20:51:26] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 67108864 bytes.
+[2026-04-19 21:52:21] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 20:52:27] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:52:56] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:52:56] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:53:03] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:53:14] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:53:14] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:53:21] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:53:37] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:53:37] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:53:43] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:53:59] platerecognizer: pas d'internet (pas de connexion internet (DNS)) — ABANDON (pas de fallback local)
+[2026-04-19 21:53:59] PHP ocr_failed fichier=Capture d’écran 2026-04-19 125232.png erreur=no_network stdout={"ok": false, "error": "no_network", "message": "Pas de connexion internet — Plate Recognizer injoignable. Vérifiez le WiFi et redéposez la photo."} |  | 
+[2026-04-19 20:54:05] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:54:23] platerecognizer: «46763أ7»
+[2026-04-19 20:55:20] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 20:55:53] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 20:56:27] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2026-04-19 20:56:35] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 20:57:12] platerecognizer: «46763أ7»
+[2026-04-19 20:58:23] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:04:28] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:04:36] platerecognizer: «46763أ7»
+[2026-04-19 21:05:56] easyocr import error: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 67108864 bytes.
+[2026-04-19 22:06:48] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:06:53] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:06:58] platerecognizer: «46763أ7»
+[2026-04-19 21:08:04] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:08:07] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:08:14] platerecognizer: «46763أ7»
+[2026-04-19 22:09:17] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:09:23] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:09:56] platerecognizer: «46763أ7»
+[2026-04-19 22:10:47] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:10:53] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:10:58] platerecognizer: «46763أ7»
+[2026-04-19 22:12:01] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:12:02] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:12:08] platerecognizer: «46763أ7»
+[2026-04-19 21:13:10] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:13:25] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:13:32] platerecognizer: «46763أ7»
+[2026-04-19 21:14:19] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:14:22] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:14:26] platerecognizer: «46763أ7»
+[2026-04-19 21:15:03] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:15:07] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:15:15] platerecognizer: «46763أ7»
+[2026-04-19 21:16:09] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:16:12] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:16:17] platerecognizer: «46763أ7»
+[2026-04-19 21:17:10] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:17:18] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:17:22] platerecognizer: «46763أ7»
+[2026-04-19 21:18:08] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:18:10] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:18:16] platerecognizer: «46763أ7»
+[2026-04-19 21:19:06] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:19:09] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:19:15] platerecognizer: «46763أ7»
+[2026-04-19 21:20:00] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:20:02] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:20:07] platerecognizer: «46763أ7»
+[2026-04-19 21:20:37] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:20:40] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:20:44] platerecognizer: «46763أ7»
+[2026-04-19 21:21:28] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:21:31] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:21:36] platerecognizer: «46763أ7»
+[2026-04-19 21:22:13] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:22:15] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:22:20] platerecognizer: «46763أ7»
+[2026-04-19 22:23:00] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:23:02] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:23:06] platerecognizer: «46763أ7»
+[2026-04-19 21:23:55] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:23:57] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:24:02] platerecognizer: «46763أ7»
+[2026-04-19 21:24:59] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:25:03] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:25:07] platerecognizer: «46763أ7»
+[2026-04-19 21:26:13] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:26:21] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:26:26] platerecognizer: «46763أ7»
+[2026-04-19 21:27:15] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:27:22] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:27:26] platerecognizer: «46763أ7»
+[2026-04-19 21:28:14] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:28:16] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:28:21] platerecognizer: «46763أ7»
+[2026-04-19 21:28:48] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:28:50] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:28:55] platerecognizer: «46763أ7»
+[2026-04-19 21:29:38] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:29:42] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:29:47] platerecognizer: «46763أ7»
+[2026-04-19 21:30:23] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:30:26] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:30:30] platerecognizer: «46763أ7»
+[2026-04-19 21:31:22] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:31:24] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:31:29] platerecognizer: «46763أ7»
+[2026-04-19 21:32:14] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:32:16] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:32:21] platerecognizer: «46763أ7»
+[2026-04-19 21:33:03] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:33:05] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:33:10] platerecognizer: «46763أ7»
+[2026-04-19 21:33:59] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:34:01] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:34:06] platerecognizer: «46763أ7»
+[2026-04-19 21:35:13] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:35:21] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:35:26] platerecognizer: «46763أ7»
+[2026-04-19 21:35:59] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:36:03] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:36:07] platerecognizer: «46763أ7»
+[2026-04-19 21:37:15] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:37:18] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:37:22] platerecognizer: «46763أ7»
+[2026-04-19 21:38:27] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:38:30] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:38:35] platerecognizer: «46763أ7»
+[2026-04-19 21:39:44] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:39:47] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:39:51] platerecognizer: «46763أ7»
+[2026-04-19 21:41:10] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:41:13] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:41:18] platerecognizer: «46763أ7»
+[2026-04-19 21:42:35] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:42:39] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:42:43] platerecognizer: «46763أ7»
+[2026-04-19 22:43:59] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:44:01] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:44:06] platerecognizer: «46763أ7»
+[2026-04-19 21:45:28] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:45:31] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:45:36] platerecognizer: «46763أ7»
+[2026-04-19 22:47:22] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:47:23] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:47:32] platerecognizer: «46763أ7»
+[2026-04-19 22:48:21] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:48:22] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:48:27] platerecognizer: «46763أ7»
+[2026-04-19 22:51:26] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:51:26] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:51:31] platerecognizer: «46763أ7»
+[2026-04-19 22:52:41] PHP récupéré résultat via fichier secours: pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png.result.json
+[2026-04-19 21:52:42] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:52:47] platerecognizer: «46763أ7»
+[2026-04-19 21:53:34] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:53:35] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:53:39] platerecognizer: «46763أ7»
+[2026-04-19 21:54:04] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:54:11] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:54:15] platerecognizer: «46763أ7»
+[2026-04-19 21:54:38] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:54:46] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:54:50] platerecognizer: «46763أ7»
+[2026-04-19 21:55:13] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:55:21] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:55:25] platerecognizer: «46763أ7»
+[2026-04-19 21:55:48] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:55:56] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:56:04] platerecognizer: «46763أ7»
+[2026-04-19 21:56:27] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:56:35] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:56:39] platerecognizer: «46763أ7»
+[2026-04-19 21:57:02] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:57:10] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:57:14] platerecognizer: «46763أ7»
+[2026-04-19 21:57:37] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:57:45] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:57:50] platerecognizer: «46763أ7»
+[2026-04-19 21:58:13] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:58:21] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:58:25] platerecognizer: «46763أ7»
+[2026-04-19 21:58:48] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:58:56] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:59:00] platerecognizer: «46763أ7»
+[2026-04-19 21:59:24] easyocr lettre: «أ» conf=0.39
+[2026-04-19 21:59:31] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 21:59:35] platerecognizer: «46763أ7»
+[2026-04-19 21:59:59] easyocr lettre: «أ» conf=0.39
+[2026-04-19 22:00:06] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 22:00:10] platerecognizer: «46763أ7»
+[2026-04-19 22:00:35] easyocr lettre: «أ» conf=0.39
+[2026-04-19 22:00:37] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 22:00:41] platerecognizer: «46763أ7»
+[2026-04-19 22:01:07] easyocr lettre: «أ» conf=0.39
+[2026-04-19 22:01:09] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 22:01:13] platerecognizer: «46763أ7»
+[2026-04-19 22:01:44] easyocr lettre: «أ» conf=0.39
+[2026-04-19 22:01:46] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 22:01:50] platerecognizer: «46763أ7»
+[2026-04-19 22:02:17] easyocr lettre: «أ» conf=0.39
+[2026-04-19 22:02:19] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 22:02:23] platerecognizer: «46763أ7»
+[2026-04-19 22:02:54] easyocr lettre: «أ» conf=0.39
+[2026-04-19 22:02:57] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-19 22:03:00] platerecognizer: «46763أ7»
+[2026-04-19 22:03:28] easyocr lettre: «أ» conf=0.39
+[2026-04-20 01:33:47] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 01:33:56] platerecognizer: «46763أ7»
+[2026-04-20 01:34:56] easyocr lettre: «أ» conf=0.39
+[2026-04-20 01:35:05] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 01:35:12] platerecognizer: «46763أ7»
+[2026-04-20 01:35:49] easyocr lettre: «أ» conf=0.39
+[2026-04-20 01:35:57] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 01:36:02] platerecognizer: «46763أ7»
+[2026-04-20 01:36:39] easyocr lettre: «أ» conf=0.39
+[2026-04-20 01:36:48] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 01:36:52] platerecognizer: «46763أ7»
+[2026-04-20 01:37:46] easyocr lettre: «أ» conf=0.39
+[2026-04-20 01:37:54] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 01:38:00] platerecognizer: «46763أ7»
+[2026-04-20 01:39:05] easyocr lettre: «أ» conf=0.39
+[2026-04-20 01:39:20] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:39:24] platerecognizer: «83092أ72»
+[2026-04-20 01:40:34] easyocr lettre: «ي» conf=1.12
+[2026-04-20 01:40:42] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:40:46] platerecognizer: «83092أ72»
+[2026-04-20 01:41:33] easyocr lettre: «ي» conf=1.12
+[2026-04-20 01:41:42] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:41:46] platerecognizer: «83092أ72»
+[2026-04-20 01:49:09] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:49:14] platerecognizer: «83092أ72»
+[2026-04-20 01:51:27] easyocr lettre: «ي» conf=1.12
+[2026-04-20 01:51:30] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:51:35] platerecognizer: «83092أ72»
+[2026-04-20 01:52:56] easyocr lettre: «ي» conf=1.12
+[2026-04-20 01:53:09] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:53:14] platerecognizer: «83092أ72»
+[2026-04-20 01:54:14] easyocr lettre: «ي» conf=1.12
+[2026-04-20 01:54:21] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:54:25] platerecognizer: «83092أ72»
+[2026-04-20 01:55:20] easyocr lettre: «ي» conf=1.12
+[2026-04-20 01:55:25] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 01:55:30] platerecognizer: «83092أ72»
+[2026-04-20 01:56:30] easyocr lettre: «ي» conf=1.12
+[2026-04-20 02:00:19] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 02:00:28] platerecognizer: «83092أ72»
+[2026-04-20 02:01:29] easyocr lettre: «ي» conf=1.12
+[2026-04-20 02:01:37] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 02:01:42] platerecognizer: «83092أ72»
+[2026-04-20 02:02:46] easyocr lettre: «ي» conf=1.12
+[2026-04-20 02:02:54] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 02:02:59] platerecognizer: «83092أ72»
+[2026-04-20 02:04:13] easyocr lettre: «ي» conf=1.12
+[2026-04-20 02:04:24] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 02:04:34] platerecognizer: «83092أ72»
+[2026-04-20 02:05:35] easyocr lettre: «ي» conf=1.12
+[2026-04-20 02:09:30] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 02:09:38] platerecognizer: «46763أ7»
+[2026-04-20 02:10:43] easyocr lettre: «أ» conf=0.39
+[2026-04-20 02:11:52] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 02:12:08] platerecognizer: «46763أ7»
+[2026-04-20 11:10:38] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 11:10:42] platerecognizer: «46763أ7»
+[2026-04-20 11:10:55] --- pfa_ocr_f8ca11d1502c2fe9bfbb1d1b68f931e441c1309f4de3172cd02362748bd1a202.png ---
+[2026-04-20 11:10:59] platerecognizer: «46763أ7»
+[2026-04-20 14:42:38] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 14:42:40] platerecognizer: «83092أ72»
+[2026-04-20 14:42:58] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 14:43:00] platerecognizer: «83092أ72»
+[2026-04-20 20:34:44] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-20 20:34:53] platerecognizer: «83092أ72»
+[2026-04-22 11:16:20] --- pfa_ocr_8653c34eb9f448cbbd45676ebec77f7f56d3422a774b4ca65f980e53a9102825.png ---
+[2026-04-22 11:16:23] platerecognizer: «83092أ72»

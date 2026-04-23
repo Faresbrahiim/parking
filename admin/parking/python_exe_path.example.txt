@@ -1,0 +1,4 @@
+# Copiez ce fichier vers python_exe_path.txt et mettez UNE ligne : chemin complet vers python.exe
+# (utile si Apache ne voit pas Python : la variable PFA_PYTHON marche aussi.)
+#
+# C:\Users\VOTRE_USER\AppData\Local\Programs\Python\Python312\python.exe
