@@ -16,6 +16,8 @@ class PlaceController {
             "data" => $places
         ]);
     }
+
+    
     public function payAndOccupy() {
 
     header("Content-Type: application/json");
