@@ -4,7 +4,7 @@
  * Fields: id_place, statut ('libre'/'occupe'), nom, prenom, id_utilisateur
  */
 
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'http://localhost/parking/user/backend/src';
 
 /* ══════════════════════════════════════════════
    STATE — persisted in localStorage
@@ -100,7 +100,7 @@ document.getElementById('loginBtn').addEventListener('click', async () => {
     localStorage.setItem('parkiq_user', JSON.stringify(data.user));
     updateAuthUI();
     closeAuthModal();
-    showToast(`Welcome back, ${data.user.prenom || data.user.nom}! 👋`, 'success');
+    showToast(`Welcome back, ${data.user.prenom || data.user.nom}! `, 'success');
     // ── Redirect to parking lots after login ──
     showView('places');
   } else {
@@ -127,7 +127,7 @@ document.getElementById('registerBtn').addEventListener('click', async () => {
   btn.textContent = 'Create Account'; btn.disabled = false;
 
   if (ok && data.status === 'success') {
-    sucEl.textContent = '✅ Account created! Please sign in.';
+    sucEl.textContent = 'Account created! Please sign in.';
     setTimeout(() => switchTab('login'), 1600);
   } else {
     errEl.textContent = data.message || data.error || 'Registration failed. Try again.';
@@ -479,7 +479,7 @@ document.getElementById('confirmPayBtn').addEventListener('click', async () => {
   btn.textContent = 'Confirm & Reserve'; btn.disabled = false;
 
   if (ok && data.status === 'success') {
-    sucEl.textContent = '✅ ' + (data.message || 'Slot reserved successfully!');
+    sucEl.textContent = ' ' + (data.message || 'Slot reserved successfully!');
     showToast('Parking reserved! 🎉', 'success');
     const idx = state.places.findIndex(p => p.id_place === state.currentPlace.id_place);
     if (idx !== -1) {
